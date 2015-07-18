@@ -1,0 +1,33 @@
+{
+  "name": "thorp",
+  "version": "0.1.0",
+  "description": "simple promise based interface for express route handlers",
+  "main": "index.js",
+  "scripts": {
+    "test": "sigh test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ohjames/thorp.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "James Pike <github@chilon.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.6.23",
+    "chai": "^3.1.0",
+    "mocha": "^2.2.5",
+    "sigh": "^0.12.10",
+    "sigh-babel": "^0.11.5",
+    "sigh-cli": "^0.2.8",
+    "sigh-mocha": "^0.1.2",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0",
+    "source-map-support": "^0.3.2"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.34"
+  }
+}
