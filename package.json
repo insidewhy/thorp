@@ -4,7 +4,7 @@
   "description": "simple promise based interface for express route handlers",
   "main": "index.js",
   "scripts": {
-    "test": "sigh test"
+    "test": "sigh"
   },
   "repository": {
     "type": "git",
