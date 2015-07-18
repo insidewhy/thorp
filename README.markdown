@@ -34,9 +34,18 @@ router.get('/user/:userId', function(req, res, next) {
 })
 ```
 
-Assuming your database layer supports promises along with callbacks you can use thorp to write a much shorter version:
+Assuming your database layer supports promises along with callbacks you can use thorp to write a much shorter version.
+
+First include thorpe:
 ```javascript
-router.get('/user/:userId', thorp(function(req, res) {
+var thorpe = require('thorpe')
+var Response = thorpe.Response
+```
+
+Then you can write much shorter response handlers using promises:
+
+```javascript
+router.get('/user/:userId', thorp(function(req) {
   return User.findOneById(req.params.userId)
   .then(function(user) {
      // throw a response to indicate an error response and avoid processing
