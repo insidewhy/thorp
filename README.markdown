@@ -1,5 +1,7 @@
 # thorp
 
+[![build status](https://circleci.com/gh/ohjames/thorp.png)](https://circleci.com/gh/ohjames/thorp)
+
 A way of building express handlers and middleware using promises to avoid rightward drift.
 
 Instead of:
