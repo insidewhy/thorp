@@ -12,8 +12,8 @@ router.get('/user/:userId', function(req, res, next) {
     if (err) {
       next(err)
     }
-    else if (user.disabled) {
-      res.status(420).json('disabled')
+    else if (! user) {
+      res.status(404)
     }
     else {
       return user.getTickets(function(err, userWithTickets) {
@@ -50,8 +50,8 @@ router.get('/user/:userId', thorp(function(req) {
   .then(function(user) {
      // throw a response to indicate an error response and avoid processing
      // of subsequent `then` branches
-     if (user.disabled)
-       throw Response(420, 'disabled')
+     if (! user)
+       throw Response(404)
 
     return user.getTickets()
   })
