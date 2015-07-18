@@ -34,7 +34,7 @@ router.get('/user/:userId', function(req, res, next) {
 })
 ```
 
-Assuming your database layer supports callbacks and promises you can:
+Assuming your database layer supports promises along with callbacks you can use thorp to write a much shorter version:
 ```javascript
 router.get('/user/:userId', function(req, res, next) {
   return User.findOneById(req.params.userId)
